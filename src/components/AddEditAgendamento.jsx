@@ -21,16 +21,16 @@ import { BiSolidTimeFive } from 'react-icons/bi';
 
 
 function AddAgendamento() {
-  const initialState = {
-    nome: "",
-    agendamento: null,
-    porcoes: ""
-  };
+  // const initialState = {
+  //   nome: "",
+  //   agendamento: null,
+  //   porcoes: ""
+  // };
 
   const [formatoHora, setformatoHora] = useState(false);
   const [carregando, setCarregando] = useState(true);
   const [data, setData] = useState({});
-  const [state, setState] = useState(initialState);
+  // const [state, setState] = useState(initialState);
   const [nome, setNome] = useState("");
   const [porcoes, setPorcoes] = useState("");
   const [agendamento, setAgendamento] = useState(null);
@@ -70,11 +70,11 @@ function AddAgendamento() {
           const agenda = parse(agd, 'HH:mm:ss', new Date());
           setAgendamento(agenda.getTime());
         } else {
-          setState({ ...initialState });
+          // setState({ ...initialState });
         }
         setTimeout(() => setCarregando(false), 1000);
         return () => {
-          setState({ ...initialState });
+          // setState({ ...initialState });
         };
       } catch (error) {
         console.log(error);

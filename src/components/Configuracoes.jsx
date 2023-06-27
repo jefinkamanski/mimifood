@@ -16,14 +16,14 @@ import { Loader } from '../services/loader';
 function Configuracoes() {
   const navigate = useNavigate();
 
-  const initialState = {
-    nome: '',
-    tamanhoPorcao: 0,
-    tempoSom: 0
-  };
+  // const initialState = {
+  //   nome: '',
+  //   tamanhoPorcao: 0,
+  //   tempoSom: 0
+  // };
 
   const [carregando, setCarregando] = useState(true);
-  const [state, setState] = useState(initialState);
+  // const [state, setState] = useState(initialState);
   const [data, setData] = useState({});
   const [id, setId] = useState(0);
   const [nome, setNome] = useState("");
@@ -61,13 +61,13 @@ function Configuracoes() {
           setTempoSom(result.tempoSom);
           setId(Object.keys(data).pop());
         } else {
-          setState({ ...initialState });
+          // setState({ ...initialState });
         }
         setTimeout(() => setCarregando(false), 1000);
       } catch (error) {
         console.log(error);
         return () => {
-          setState({ ...initialState });
+          // setState({ ...initialState });
         };
       }
     }
